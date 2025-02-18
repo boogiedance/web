@@ -1,0 +1,121 @@
+/* Общие стили */
+
+/* В логотипе. Не трогать */
+h1 {
+    font-family: "Lobster", sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+/* Заголовок для частей страниц */
+h2 {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 2em;
+    margin-left: 8px;
+    margin-bottom: 0.5em;
+    color: #333;
+    font-style: none;
+    font-weight: 500;
+}
+
+input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+main h2 {
+    margin: 0 20px 0 20px;
+}
+
+/* Заголовок для абзацев */
+h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    font-style: bold;
+    font-weight: 600;
+}
+
+article h3 {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    color: #333;
+}
+
+body {
+    background-image: url("images/bg2.jpg");
+    background-color: #fff;
+    background-attachment: fixed; /* Фиксирует изображение на экране при прокрутке */
+    background-position: center bottom; /* Позиционирует картинку снизу и по центру */
+    background-repeat: no-repeat; /* Запрещает повторение изображения */
+    background-size: cover; /* Покрывает весь экран */
+    
+    font-family: "Inter", sans-serif;
+    color: #000000;
+    padding-top: 150px; /* Отступ, чтобы контент под шапкой не перекрывался */
+}
+
+p {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 0.5em;
+}
+
+br {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none; /*убираем подчеркивания с links*/
+}
+
+ul {
+    list-style: none;    /*убираем маркеры со списка*/
+}
+
+
+article {
+    /* верх право низ лево */
+    margin: 40px 20px 40px 20px;
+}
+
+article p {
+    margin-bottom: 0.8em;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+    
+}
+
+article p a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+article p a:hover {
+    text-decoration: underline;
+}
+
+article p strong {
+    color: #333;
+    font-weight: bold;
+}
+
+label {
+    font-family: "Inter", sans-serif;
+    font-size: 1em;
+    color: #333;
+}
+
+button {
+    background-color: #177AC3;
+}

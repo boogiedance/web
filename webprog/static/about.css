@@ -1,0 +1,19 @@
+.about h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #333; /* Полоска под заголовком */
+}
+
+.about ul {
+    font-family: "Montserrat Alternates", sans-serif;
+    list-style-type: disc; /* Маркированный список */
+    padding-left: 20px; /* Отступ для списка */
+}
+
+.about ul li {
+    line-height: 1.8; /* Интервал между строками */
+    font-size: 16px;
+    color: #333;
+}
+

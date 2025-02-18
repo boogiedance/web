@@ -1,0 +1,119 @@
+ /* ШАПКА */
+.header {
+    position: fixed; /* Фиксируем шапку */
+    top: 0; /* Располагаем её в верхней части страницы */
+    left: 0; /* Прижимаем к левому краю */
+    width: 100%; /* Растягиваем шапку на всю ширину */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Устанавливаем высокий приоритет отображения */
+
+    padding: 16px;
+
+    background-image: url("images/bg_header_1.jpg");
+    background-color: #2FC5E6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Добавляем легкую тень */
+}
+
+/* КОНТЕЙНЕР логотипа */
+.header__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    width: 320px;
+    height: 100px;
+
+    font-weight: 600;;
+    font-size: 16px;
+
+    background-image: url("images/bg_header_3.jpg");
+    background-color: #177AC3;
+    border-radius: 16px;
+
+    transition: opacity 0.3s;
+}
+.header__logo a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.header__logo img {
+    display: flex;
+    width: 100px;
+    height: auto;
+    margin-left: 5px;
+}
+
+/* прозрачность при наведении на кнопку-лого */
+.header__logo:hover {
+    opacity: 0.8;
+}
+
+/* КОНТЕЙНЕР поиска */
+.search-container {
+    display: flex;
+    width: fit-content;
+    max-width: 800px; /* Ограничивает максимальную ширину */
+    margin: 0 20px; /* Расстояние по бокам */
+}
+
+/* СТРОКА поиска */
+.search-input {
+    width: 700px;
+    height: 40px;
+    padding: 8px; 
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    transition: box-shadow 0.3s ease; /* Плавный переход для тени */
+}
+
+/* навигационное меню */
+.header__nav img {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: auto;
+}
+
+/* Контейнер навигации */
+.header__nav-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-right: 60px;
+    align-items: baseline;
+}
+
+/* Иконки внутри навигации */
+.header__nav-list img {
+    width: 60px;
+    height: 64px;
+    margin-bottom: 5px; /* Отступ между иконкой и текстом */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.header__nav-list a {
+    display: flex; /* Для корректного масштабирования */
+    flex-direction: column;
+    align-items: center;
+    
+    font-weight: 800;;
+    font-size: 16px;
+    color: #fff;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Плавная анимация */
+}
+
+.header__nav-list li:hover img {
+    transform: scale(1.1); /* Легкое увеличение */
+}
+
+.header__nav-list li:hover a {
+    transform: scale(1.1); /* Легкое увеличение */
+}
+

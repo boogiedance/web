@@ -1,0 +1,239 @@
+
+/* КАТАЛОГ (обертка для секций)*/
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    width: 80%;
+
+    margin: 10px 10px 30px 10px;
+    padding: 20px; 
+    
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #e3e3e3;
+    border-radius: 16px;
+}
+
+/* Отдельная карта */
+.card {
+    display: flex;
+    flex-direction: column;
+    
+    width: 230px;
+    height: auto;
+    
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* описание карточки */
+.card-info {
+    display: block;
+    align-items: flex-start;
+    padding: 1em;
+}
+
+.book-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
+    min-height: 3em;
+    overflow: hidden;
+
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.book-author {
+    display: block;
+    color: #bebebe;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 1em;
+}
+
+
+.book-title:hover, .book-author:hover {
+    color: #2FC5E6;
+}
+
+
+/* Коробка с кнопками */
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 12px 10px;
+}
+
+.reserve-btn {
+    border: none;
+    border-radius: 0;
+    width: 76%;
+    height: 40px;
+
+    font-size: 1em;
+    cursor: pointer;
+
+    padding: 0.5em 1em;
+
+    background-color: #2FC5E6;
+    transition: background-color 0.2s ease;
+    color: white;
+}
+
+.reserve-btn:hover {
+    background-color: #239cb0;
+}
+
+.favorite-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px; /* Устанавливаем размер кнопки */
+    height: 40px;
+    
+    border: none;
+    border-radius: 0; /* Делаем углы прямыми */
+    background-color: #D9DDDE;
+    background-image: url('% static images/mini_fav.png%');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px; /* Размер иконки */
+    
+    cursor: pointer;
+    padding: 0;
+}
+
+.favorite-btn:hover {
+    filter: brightness(0.8);
+}
+
+/* Общий класс для витрин */
+.showcase {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Общий класс для заголовков витрин */
+.showcase__header {
+    display: flex;
+    justify-content: space-between;
+    
+    width: 100%;
+
+    align-items: center;
+    text-align: center;
+    margin: auto;
+
+    border: 2px;
+    border-radius: 16px;
+
+}
+
+/* Коробка с навигацей в заголовке*/
+.header__nav-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 14px;
+}
+
+/* Контейнер с картами */
+.carousel-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    min-width: 100%; /* Карточка занимает всю ширину карусели */
+    box-sizing: border-box;
+
+    padding: 20px;
+    margin-bottom: 5em;
+
+    background: rgba(255, 255, 255, 0);
+}
+
+.carousel-control {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    transition: opacity 0.3s ease;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.prev {
+    background-image: url("../sources/prev.png");
+}
+
+.next {
+    background-image: url("../sources/next.png");
+}
+
+.carousel-control:hover {
+    opacity: 0.7;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.dot {
+    display: flex;
+    justify-content: flex-start;
+
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #2FC5E6;
+}

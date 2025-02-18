@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Часто задаваемые вопросы</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'reset.css' %}">
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'header.css' %}">
+    <link rel="stylesheet" href="{% static 'aside.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="{% static 'footer.css' %}">
+</head>
+
+<body>
+     
+   <header class="header">
+        <!-- Логотип -->
+        <div class="header__logo">
+            <a href="{% url 'about' %}">
+                <img src="{% static 'images/logo.png' %}" alt="Логотип">
+                <h1>Библиотека №21 имени Н.М. Рубцова</h1>
+            </a>
+        </div>
+
+        <!-- Строка поиска -->
+        <div class="search-container">
+            <input  type="text" class="search-input" placeholder="Поиск...">
+        </div>
+
+        <!-- Навигация -->
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li>
+                    <a href="#">
+                        <img src="{% static 'images/Профиль.png' %}" alt="ПРОФИЛЬ">ВОЙТИ</a>
+                </li>
+
+                <li><a href="favourites.php">
+                    <img src="{% static 'images/Избранное.png' %}" alt="ИЗБРАННОЕ">ИЗБРАННОЕ</a>
+                </li>
+
+                <li><a href="orders.php">
+                    <img src="{% static 'images/Заказы.png' %}" alt="ЗАКАЗЫ">ЗАКАЗЫ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- КОНТЕЙНЕР С БОКОВОЙ ПАНЕЛЬЮ И ВИТРИНОЙ -->
+    <div class="container">
+        
+        <!-- Боковая панель -->
+        <aside>
+            <div class="sidebar">
+                <a href="{% url 'about' %}">
+                    <h2>Каталог</h2>
+                </a>
+                <ul class="genre-list">
+                    <li><a href="#">Фантастика</a></li>
+                    <li><a href="#">Детективы</a></li>
+                    <li><a href="#">Романы</a></li>
+                    <li><a href="#">Фэнтези</a></li>
+                    <li><a href="#">Биографии</a></li>
+                    <li><a href="#">Научная литература</a></li>
+                    <li><a href="#">История</a></li>
+                    <li><a href="#">Саморазвитие</a></li>
+                </ul>
+            </div>
+        </aside>
+
+
+        <!-- основная часть -->
+        <main class="main">
+            <section class="about">
+                <h2>Часто задаваемые вопросы</h2>
+                <article>
+                    <h3>Q: Как стать читателем?</h3>
+                    <p>
+                        A: Читателем может стать любой гражданин РФ, независимо от места постоянного проживания.
+                        <br>Для записи в библиотеку Вам необходимо иметь при себе документ (паспорт) с отметкой о регистрации в городе Сургуте;
+                        если Вы не имеете постоянной регистрации, то можете пользоваться фондами читальных залов, либо получить необходимые документы на абонементе под денежный залог;
+                        дети до 14 лет записываются в библиотеку на основании документов, удостоверяющих личность одного из родителей (или лица, под опекой которого они состоят) и поручительства (бланк поручительства выдаст библиотекарь).
+                    </p>
+                </article>
+                <article>
+                    <h3>Q: Сколько книг можно взять на абонементе?</h3>
+                    <p>A: За один раз вы имеете возможность взять не более 5 книг..</p>
+                </article>
+                    
+                <article>
+                    <h3>Q: На какой срок выдаются книги?</h3>
+                    <p>A: Литература выдается читателям сроком до 30 дней.</p>
+                </article>
+
+                <article>
+                    <h3>Q: Как продлить срок пользования книгами?</h3>
+                    <p>A: Вы можете продлить срок пользования книгами при посещении библиотеки, по телефону (но не более двух раз), если на них нет спроса со стороны других читателей..</p>
+                </article>
+
+                <article>
+                    <h3>Q: Что делать, если я задержал книгу больше срока?</h3>
+                    <p>A: Если Вы не вернули книги в библиотеку в течение 30 дней и не продлили срок пользования ими, то Вы являетесь задолжником и должны выплатить денежную компенсацию, которая взимается за каждый просроченный день в сумме 20 рублей.</p>
+                </article>
+
+                <article>
+                    <h3>Q: Что делать, если я потерял или испортил библиотечную книгу?</h3>
+                    <p>A: В случае утраты или порчи издания Вы можете заменить его таким же изданием или иным, признанными библиотекарем равноценным,
+                        либо возместить его стоимость.</p>
+                </article>
+            </section>   
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="{% url 'links' %}"><h3>Часто задаваемые вопросы (FAQ)</h3></a>
+                <a href="{% url 'about' %}"><h3>Информационный раздел "О нас"</h3></a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Обратная связь</h3>
+                <p>Есть вопросы? Напишите нам на почту!</p>
+                <form action="mailto:info@yourcompany.com" method="post" enctype="text/plain">
+                    <label for="email">Ваш email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Введите ваш email">
+                    <br>
+                    <textarea name="message" rows="4" placeholder="Ваше сообщение" required></textarea>
+                    <br>
+                    <button type="submit">Отправить письмо</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+ </body>
+ </html>

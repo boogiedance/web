@@ -1,0 +1,51 @@
+/* Вилка на КАТАЛОГ | ЛИТЕРАТУРА */
+.container {
+    display: flex;
+}
+
+aside {
+    width: 16%;
+}
+
+/* БОКОВАЯ ПАНЕЛЬ */
+.sidebar {
+    position: sticky; /* Фиксация на экране */
+    top: 120px; /* Отступ от верхнего края */
+    flex-shrink: 0; /* Боковая панель не будет сжиматься */
+    
+    background: rgba(255, 255, 255, 0.8);
+
+    margin: 10px 0px 30px 10px;
+    padding: 20px;
+
+    font-family: "Montserrat Alternates", sans-serif;
+
+    height: fit-content; /* Высота зависит от содержимого */
+    overflow-y: auto; /* Скролл, если жанров слишком много */
+
+    border: 2px solid #e3e3e3;
+    border-radius: 16px;
+}
+
+.genre-list {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
+
+.genre-list li {
+    margin-bottom: 0.5em; /* Расстояние между жанрами */
+}
+
+.genre-list a {
+    color: #438EC4; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 1em;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.genre-list a:hover {
+    background-color: #2FC5E6; /* Подсветка при наведении */
+    color: #fff; /* Изменение цвета текста при наведении */
+}
