@@ -5,21 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4366e23e-b9e8-45b8-9071-350f7582642c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webprogramming.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webprog/static/about.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webprog/static/aside.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webprog/static/fonts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webprog/static/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webprog/static/global.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webprog/static/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webprog/static/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webprog/static/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webprog/templates/app/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webprog/templates/app/links.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webprog/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webprog/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webprog/templates/app/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/webprog/app/templates/app/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webprog/templates/app/links.html" beforeDir="false" afterPath="$PROJECT_DIR$/webprog/app/templates/app/links.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webprog/webprog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/webprog/webprog/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +43,9 @@
       <recent name="$PROJECT_DIR$/webprog/app/templates/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webprog/app" />
       <recent name="$PROJECT_DIR$/webprog" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/webprog/app" />
     </key>
   </component>
   <component name="SharedIndexes">
