@@ -12,7 +12,7 @@
 
     padding: 16px;
 
-    background-image: url("images/bg_header_1.jpg");
+    background-image: url("../images/bg_header_1.jpg");
     background-color: #2FC5E6;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Добавляем легкую тень */
 }
@@ -30,7 +30,7 @@
     font-weight: 600;;
     font-size: 16px;
 
-    background-image: url("images/bg_header_3.jpg");
+    background-image: url("../images/bg_header_3.jpg");
     background-color: #177AC3;
     border-radius: 16px;
 

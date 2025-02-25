@@ -1,0 +1,20 @@
+/* Общие стили для формы */
+.pool_form {
+    margin-top: 30px;
+    gap: 10px;
+}
+#submit-button {
+    padding: 12px 24px;
+    background-color: #2FC5E6; /* Цвет фона */
+    color: white; /* Цвет текста */
+    border: none;
+    border-radius: 8px; /* Закруглённые углы */
+    font-family: "Inter", sans-serif;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Плавное изменение цвета */
+}
+
+#submit-button:hover {
+    background-color: #177AC3; /* Цвет фона при наведении */
+}

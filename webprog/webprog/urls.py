@@ -16,11 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 from app.views import about_page, links_page
-
+from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', about_page, name='about'),
-    path('links/', links_page, name='links')
-]
+    path('links/', links_page, name='links'),
+    path('pool/', views.pool, name='pool')
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,0 +1,107 @@
+ {% load static %}
+
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aside.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+     {% block unique_links %}{% endblock %}
+</head>
+
+<body>
+    <header class="header">
+        <!-- Логотип -->
+        <div class="header__logo">
+            <a href="{% url 'about' %}">
+                <img src="{% static 'images/logo.png' %}" alt="Логотип">
+                <h1>Библиотека №21 имени Н.М. Рубцова</h1>
+            </a>
+        </div>
+
+        <!-- Строка поиска -->
+        <div class="search-container">
+            <input  type="text" class="search-input" placeholder="Поиск...">
+        </div>
+
+        <!-- Навигация -->
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li>
+                    <a href="#">
+                        <img src="{% static 'images/Профиль.png' %}" alt="ПРОФИЛЬ">ВОЙТИ</a>
+                </li>
+
+                <li><a href="#">
+                    <img src="{% static 'images/Избранное.png' %}" alt="ИЗБРАННОЕ">ИЗБРАННОЕ</a>
+                </li>
+
+                <li><a href="#">
+                    <img src="{% static 'images/Заказы.png' %}" alt="ЗАКАЗЫ">ЗАКАЗЫ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- КОНТЕЙНЕР С БОКОВОЙ ПАНЕЛЬЮ И ВИТРИНОЙ -->
+    <div class="container">
+        <!-- Боковая панель -->
+        <aside>
+            <div class="sidebar">
+                <a href="{% url 'about' %}">
+                    <h2>Каталог</h2>
+                </a>
+                <ul class="genre-list">
+                    <li><a href="#">Фантастика</a></li>
+                    <li><a href="#">Детективы</a></li>
+                    <li><a href="#">Романы</a></li>
+                    <li><a href="#">Фэнтези</a></li>
+                    <li><a href="#">Биографии</a></li>
+                    <li><a href="#">Научная литература</a></li>
+                    <li><a href="#">История</a></li>
+                    <li><a href="#">Саморазвитие</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- основная часть -->
+        <main class="main">
+            {% block main_content %}
+            {% endblock %}
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <a href="{% url 'links' %}"><h3>Часто задаваемые вопросы (FAQ)</h3></a>
+                <a href="{% url 'about' %}"><h3>Информационный раздел "О нас"</h3></a>
+                <a href="{% url 'pool' %}"><h3>Понравился веб-сайт? Оцените нас!</h3></a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Обратная связь</h3>
+                <p>Есть вопросы? Напишите нам на почту!</p>
+                <form action="mailto:info@yourcompany.com" method="post" enctype="text/plain">
+                    <label for="email">Ваш email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Введите ваш email">
+                    <br>
+                    <textarea name="message" rows="4" placeholder="Ваше сообщение" required></textarea>
+                    <br>
+                    <button type="submit">Отправить письмо</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+ </body>
+ </html>

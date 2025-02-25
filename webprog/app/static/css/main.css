@@ -1,0 +1,16 @@
+/* КАТАЛОГ (обертка для секций)*/
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    width: 80%;
+
+    margin: 10px 10px 30px 10px;
+    padding: 20px; 
+    
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #e3e3e3;
+    border-radius: 16px;
+}

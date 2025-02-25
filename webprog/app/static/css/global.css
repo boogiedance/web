@@ -47,7 +47,7 @@ article h3 {
 }
 
 body {
-    background-image: url("images/bg2.jpg");
+    background-image: url("../images/bg2.jpg");
     background-color: #fff;
     background-attachment: fixed; /* Фиксирует изображение на экране при прокрутке */
     background-position: center bottom; /* Позиционирует картинку снизу и по центру */
