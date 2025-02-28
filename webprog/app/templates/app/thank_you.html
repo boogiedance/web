@@ -6,9 +6,12 @@
 {% endblock %}
 
 {% block unique_links %}
-<link rel="stylesheet" href="{% static 'css/thank_you.css' %}">
+    <link rel="stylesheet" href="{% static 'css/thank_you.css' %}">
 {% endblock %}
 
+{% block aside_content %}
+    {% include 'app/includes/aside.html'  %}
+{% endblock %}
 
 {% block main_content %}
     <h2>Спасибо за ваш отзыв, {{ name }}!</h2>

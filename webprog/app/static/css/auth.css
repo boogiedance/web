@@ -1,0 +1,156 @@
+/* КАТАЛОГ (обертка для секций) */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 25%;
+
+    margin: 20px auto 30px auto;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #e3e3e3;
+    border-radius: 16px;
+}
+
+.main h2 {
+    margin-bottom: 1em;
+}
+
+/* Стили формы */
+.registration-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Стиль меток */
+.registration-form label {
+    font-family: "Inter", sans-serif;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Стили ввода */
+.registration-form input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Кнопка отправки */
+.registration-form button {
+    padding: 12px;
+    font-size: 1em;
+    color: #fff;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Наведение на кнопку отправки */
+.registration-form button:hover {
+    background: #0056b3;
+}
+
+.registration-form button:disabled {
+    background: gray;
+}
+
+.login-link {
+    color: #0056b3;
+}
+
+/* Контейнер (метка + поле ввода) */
+.form-group {
+    font-family: "Inter", sans-serif;
+    font-size: 1em;
+    color: #333;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Общий контейнер для формы и подсказок */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+}
+
+/* Стили для подсказок */
+.help-text {
+    font-family: "Inter", sans-serif;
+    font-size: 1em;
+    color: #333;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    max-width: 400px;
+}
+
+.hint:empty {
+    display: none; /* Полностью скрыть пустую подсказку */
+}
+
+/* Красная подсказка */
+.hint.error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+/* Зелёная подсказка */
+.hint.success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили списка внутри подсказок */
+.hint.error li {
+    list-style-position: inside;
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+
+/* Стили списка внутри подсказок */
+.help-text ul {
+    width: 100%;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.help-text ul li {
+    margin-bottom: 5px;
+    list-style-type: disc;
+}

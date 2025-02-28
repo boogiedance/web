@@ -1,0 +1,23 @@
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <a href="{% url 'links' %}"><h3>Часто задаваемые вопросы (FAQ)</h3></a>
+                <a href="{% url 'about' %}"><h3>Информационный раздел "О нас"</h3></a>
+                <a href="{% url 'pool' %}"><h3>Понравился веб-сайт? Оцените нас!</h3></a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Обратная связь</h3>
+                <p>Есть вопросы? Напишите нам на почту!</p>
+                <form action="mailto:info@yourcompany.com" method="post" enctype="text/plain">
+                    <label for="email">Ваш email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Введите ваш email">
+                    <br>
+                    <textarea name="message" rows="4" placeholder="Ваше сообщение" required></textarea>
+                    <br>
+                    <button type="submit">Отправить письмо</button>
+                </form>
+            </div>
+        </div>
+    </footer>

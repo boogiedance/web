@@ -18,12 +18,22 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from app.views import about_page, links_page
+from app.views import about_page, links_page, log_in_page
 from app import views
+from django.contrib.auth import views as auth_views
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', about_page, name='about'),
     path('links/', links_page, name='links'),
-    path('pool/', views.pool, name='pool')
+
+    path('pool/', views.pool, name='pool'),
+    path('profile/', views.profile, name='profile'),
+
+    path('registration/', views.registration, name='registration'),
+    path('login/', auth_views.LoginView.as_view(template_name='app/log_in.html'), name='log_in'),
+    path('logout/', auth_views.LogoutView.as_view(next_page='about'), name='logout'),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

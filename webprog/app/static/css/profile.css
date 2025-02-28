@@ -1,0 +1,63 @@
+aside {
+    width: 20%;
+}
+
+.genre-list {
+    list-style: none; /* Убираем стандартные маркеры списка */
+    padding: 0;
+    margin: 0;
+}
+
+.genre-list li {
+    margin: 10px 0; /* Отступ между элементами списка */
+    font-size: 1.3em;
+}
+
+.genre-list a {
+    display: flex; /* Используем flex для выравнивания картинки и текста */
+    align-items: center; /* Выравнивание по вертикали */
+    text-decoration: none; /* Убираем подчеркивание текста */
+    color: #000; /* Цвет текста */
+}
+
+.genre-list a img {
+    width: 24px;
+    height: auto;
+    margin-right: 10px; /* Отступ между картинкой и текстом */
+}
+
+.genre-list li:nth-child(1) a {
+    color: #2FC5E6;
+}
+
+.genre-list li:nth-child(1) a:hover {
+    color: #fff;
+}
+
+.genre-list li a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.genre-list a:hover {
+    background-color: #2FC5E6; /* Подсветка при наведении */
+    color: #fff; /* Изменение цвета текста при наведении */
+}
+
+.profile-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две равные колонки */
+    margin-top: 2em;
+    margin-bottom: 2em;
+    gap: 1em;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section {
+    margin-left: 1em;
+    margin-top: 1.2em;
+    gap: 4px;
+}

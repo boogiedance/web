@@ -1,0 +1,54 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+
+{% block title %}
+    Профиль
+{% endblock %}
+
+{% block unique_links %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+{# Боковая панель #}
+{% block aside_content %}
+    <div class="sidebar">
+        <a href="{% url 'profile' %}">
+            <h2>Профиль</h2>
+        </a>
+        <ul class="genre-list">
+            <li>
+                <a href="{% url 'profile' %}">
+                    <img src="{% static 'images/profile_blue.png' %}" alt="Профиль">Профиль
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="{% static 'images/fav_small_black.png' %}" alt="Избранное">Избранное
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="{% static 'images/orders_small_black.png' %}" alt="Заказы">Заказы
+                </a>
+            </li>
+            <li>
+                <form action="{% url 'logout' %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <a href="#" onclick="this.closest('form').submit(); return false;">
+                        <img src="{% static 'images/logout_small_black.png' %}" alt="Выйти">Выйти
+                    </a>
+                </form>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block main_content %}
+<div class="profile-container">
+    <h2>Личные данные</h2>
+    <div class="profile-section">
+        <p>Имя пользователя: {{ user.username }}</p>
+        <p>Email: {{ user.email }}</p>
+    </div>
+</div>
+{% endblock %}

@@ -6,7 +6,11 @@
 {% endblock %}
 
 {% block unique_links %}
-<link rel="stylesheet" href="{% static 'css/pool.css' %}">
+    <link rel="stylesheet" href="{% static 'css/pool.css' %}">
+{% endblock %}
+
+{% block aside_content %}
+    {% include 'app/includes/aside.html'  %}
 {% endblock %}
 
 {% block main_content %}
@@ -17,3 +21,4 @@
         <button type="submit" id="submit-button">Отправить</button>
     </form>
 {% endblock %}
+

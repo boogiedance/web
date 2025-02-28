@@ -5,6 +5,14 @@
     Информационный раздел "О нас"
 {% endblock %}
 
+{% block unique_links %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block aside_content %}
+    {% include 'app/includes/aside.html'  %}
+{% endblock %}
+
 {% block main_content %}
     <section class="about">
         <h2>Информационный раздел "О нас"</h2>

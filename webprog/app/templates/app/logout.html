@@ -1,0 +1,13 @@
+{% extends 'app/layout.html' %}
+
+{% block title %}
+    Выход
+{% endblock %}
+
+{% block content %}
+    <div class="logout">
+        <h2>Вы вышли из системы</h2>
+        <p>Спасибо за посещение нашего сайта.</p>
+        <a href="{% url 'login' %}">Войти снова</a>
+    </div>
+{% endblock %}

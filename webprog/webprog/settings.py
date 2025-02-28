@@ -118,6 +118,7 @@ USE_TZ = True
 
 STATIC_URL = 'app/static/'
 STATICFILES_DIRS = [BASE_DIR / 'app/static']
+LOGIN_REDIRECT_URL = '/profile/'
 
 CACHES = {
     'default': {
