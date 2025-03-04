@@ -10,21 +10,36 @@
 {% endblock %}
 
 {% block main_content %}
-<h2>Авторизация</h2>
-<form class="registration-form" method="post">
-    {% csrf_token %}
+    <h2>Авторизация</h2>
 
-    <div class="form-group">
-        {{ form.username.label_tag }}
-        {{ form.username }}
-    </div>
+    <form class="registration-form" method="POST">
+        {% csrf_token %}
 
-    <div class="form-group">
-        {{ form.password.label_tag }}
-        {{ form.password }}
-    </div>
+        <div class="form-group">
+            <label for="username">Логин</label>
+            <input type="text" id="username" name="username" placeholder="Введите логин">
+        </div>
 
-    <p>Ещё нет аккаунта? <a class="login-link" href="{% url 'registration' %}">Зарегистрируйтесь!</a></p>
-    <button type="submit" class="submit-button">Войти</button>
-</form>
+        <div class="form-group">
+            <label for="password">Пароль</label>
+            <input type="password" id="password" name="password" placeholder="Введите пароль">
+        </div>
+
+        <!-- Выводим ошибки формы -->
+        {% if form.non_field_errors %}
+            <div class="alert alert-error">
+                {% for error in form.non_field_errors %}
+                    {{ error }}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <div class="form-group">
+            <p>Еще нет аккаунта? <a class="login-link" href="{% url 'registration' %}">Зарегистрироваться!</a></p>
+        </div>
+
+        <button type="submit" class="auth-button">Войти</button>
+    </form>
+
+    <script src="{% static 'js/auth.js' %}"></script>
 {% endblock %}

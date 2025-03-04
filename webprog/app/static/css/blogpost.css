@@ -1,0 +1,30 @@
+
+/* Основной текст статьи */
+.post-content {
+    margin-top: 20px;
+    margin-left: 20px;  /* Делаем отступ слева */
+    font-size: 1.1em;   /* Чуть увеличиваем размер шрифта */
+    line-height: 1.6;   /* Добавляем удобочитаемый межстрочный интервал */
+}
+
+/* Ссылка "Назад" */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;  /* Выравниваем с текстом */
+    color: #438EC4;  /* Делаем ссылку сине-голубой */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline; /* Добавляем подчёркивание при наведении */
+}
+
+.blog-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 8px;
+}

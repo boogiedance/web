@@ -1,0 +1,90 @@
+/* ===================== */
+/* СТИЛИ ДЛЯ КОММЕНТАРИЕВ */
+/* ===================== */
+
+.comment-section {
+    margin-top: 2em;
+    padding: 1em;
+    border-top: 2px solid #ddd;
+}
+
+/* Заголовок "Комментарии" */
+.comment-section h3 {
+    font-family: "Comfortaa", sans-serif;
+    margin-bottom: 1em;
+    font-size: 1.4em;
+}
+
+/* Комментарий */
+.comment {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    border: 1px solid #ddd;
+}
+
+/* Автор комментария */
+.comment h5 {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Дата комментария */
+.comment h7 {
+    font-family: "Comfortaa", sans-serif;
+    color: #666;
+    font-size: 0.9em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Текст комментария */
+.comment p {
+    font-size: 1em;
+    color: #222;
+}
+
+/* ===================== */
+/* СТИЛИ ДЛЯ ФОРМЫ КОММЕНТАРИЕВ */
+/* ===================== */
+
+.comment-form {
+    margin-top: 2em;
+    padding: 1em;
+    border-top: 2px solid #ddd;
+}
+
+/* Заголовок "Добавить комментарий" */
+.comment-form h3 {
+    margin-bottom: 1em;
+    font-size: 1.4em;
+}
+
+/* Поля формы */
+.comment-form form textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Кнопка отправки */
+.comment-form button {
+    background-color: #438EC4;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.comment-form button:hover {
+    background-color: #356A9A;
+}

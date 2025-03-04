@@ -1,0 +1,26 @@
+{% extends "app/layout.html" %}
+{% load static %}
+
+{% block unique_links %}
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% endblock %}
+
+
+{% block aside_content %}
+    {% include 'app/includes/aside.html'  %}
+{% endblock %}
+
+{% block main_content %}
+    <h2>{{ title }}</h2>
+    <br />
+    <div class="blog-container">
+        {% for post in posts %}
+            <div class="blog-post">
+                <h3>{{ post.title }}</h3>
+                <p class="post-meta">{{ post.posted }}</p>
+                <p>{{ post.description }}</p>
+                <p><a href="{% url 'blogpost' parametr=post.id %}" class="read-more">Читать далее</a></p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

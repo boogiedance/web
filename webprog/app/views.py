@@ -1,9 +1,13 @@
 from django.shortcuts import render, redirect
 from .forms import FeedbackForm
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.http import HttpRequest
 from datetime import datetime
+from .models import Blog, Comment
+from .forms import CommentForm, BlogForm
+
 
 def about_page(request):
     return render(request, 'app/about.html')
@@ -69,3 +73,51 @@ def profile(request):
     if not request.user.is_authenticated:
         return redirect('log_in')
     return render(request, 'app/profile.html')
+
+def blog(request):
+    """Отображает страницу со списком постов блога."""
+    assert isinstance(request, HttpRequest)
+    posts = Blog.objects.all()              # Выбор всех постов из модели Blog
+    return render(request, 'app/blog.html', {
+        'title': 'Блог',
+        'posts': posts,
+        'year': datetime.now().year,
+    })
+
+
+def blogpost(request, parametr):
+    """Отображает страницу конкретного поста блога."""
+    post_1 = Blog.objects.get(id=parametr)  # Получаем статью
+    comments = Comment.objects.filter(post=post_1).order_by('-date')  # Сортируем по убыванию даты
+
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment_f = form.save(commit=False)
+            comment_f.author = request.user
+            comment_f.date = datetime.now()
+            comment_f.post = post_1
+            comment_f.save()
+            return redirect('blogpost', parametr=post_1.id)  # Перезагрузка страницы после комментария
+    else:
+        form = CommentForm()
+
+    return render(request, 'app/blogpost.html', {
+        'post_1': post_1,
+        'comments': comments,  # Передаём отсортированные комментарии
+        'form': form,
+    })
+
+def newpost(request):
+    if request.method == 'POST':
+        form = BlogForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('blog')
+    else:
+        form = BlogForm()
+    return render(request, 'app/newpost.html', {'form': form})
+
+def videopost(request):
+    return render(request, 'app/videopost.html')
+

@@ -1,0 +1,28 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+
+{% block title %}Видео{% endblock %}
+
+{% block unique_links %}
+    <link rel="stylesheet" href="{% static 'css/videopost.css' %}">
+{% endblock %}
+
+{% block aside_content %}
+    {% include 'app/includes/aside.html'  %}
+{% endblock %}
+
+{% block main_content %}
+    <h2>Видео</h2>
+
+    <div class="video-container">
+        <video width="320" height="240" controls preload="metadata" poster="{% static 'images/video1.jpg' %}" onloadedmetadata="this.currentTime = 0;">
+            <source src="{% static 'media/video1.mp4' %}" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="video-container">
+        <video width="320" height="240" controls preload="metadata" poster="{% static 'images/video2.jpg' %}" onloadedmetadata="this.currentTime = 0;">
+            <source src="{% static 'media/video2.mp4' %}" type="video/mp4">
+        </video>
+    </div>
+{% endblock %}

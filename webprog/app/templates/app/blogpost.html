@@ -1,0 +1,52 @@
+{% extends "app/layout.html" %}
+{% load static %}
+
+{% block unique_links %}
+    <link rel="stylesheet" href="{% static 'css/blogpost.css' %}">
+    <link rel="stylesheet" href="{% static 'css/comments.css' %}">
+{% endblock %}
+
+{% block aside_content %}
+    {% include 'app/includes/aside.html' %}
+{% endblock %}
+
+{% block main_content %}
+    {% if post_1.image %}
+        <img src="{{ post_1.image.url }}" alt="Изображение статьи" class="blog-image">
+    {% endif %}
+    <p><strong>Автор:</strong> {{ post_1.author.username }}</p>
+    <h2>{{ post_1.title }}</h2>
+    <p class="post-content">{{ post_1.content|linebreaksbr }}</p>
+    <p><a href="{% url 'blog' %}" class="back-link">Назад</a></p>
+
+    <div class="comment-section">
+        <h3>Комментарии:</h3>
+        {% if comments %}
+            {% for comment in comments %}
+                <div class="comment">
+                    <hr/>
+                    <h5>{{ comment.author }}</h5>
+                    <h7>{{ comment.date }}</h7>
+                    <p>{{ comment.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Комментариев пока нет.</p>
+        {% endif %}
+    </div>
+
+    <div class="comment-form">
+        {% if user.is_authenticated %}
+            <h3>Добавить комментарий</h3>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Отправить комментарий</button>
+                </div>
+            </form>
+        {% else %}
+            <h3>Для добавления комментария, пожалуйста, авторизуйтесь</h3>
+        {% endif %}
+    </div>
+{% endblock %}

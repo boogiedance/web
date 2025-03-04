@@ -1,0 +1,41 @@
+/* Стили для страницы blog.html */
+
+/* Общий контейнер для статей */
+.blog-container {
+    margin-top: 1em;
+}
+
+/* Стили для каждой статьи */
+.blog-post {
+    font-family: "Montserrat Alternates", sans-serif;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Заголовок статьи */
+.blog-post h3 {
+    font-family: "Montserrat Alternates", sans-serif;
+    margin-left: 20px;
+    font-size: 1.4em;
+    margin-bottom: 0.3em;
+}
+
+/* Дата публикации */
+.blog-post .post-meta {
+    margin-left: 20px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Ссылка "Читать далее" */
+.blog-post .read-more {
+    margin-left: 20px;
+    color: #438EC4;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.blog-post .read-more:hover {
+    text-decoration: underline;
+}

@@ -1,4 +1,7 @@
 from django import forms
+from .models import Comment, Blog
+from django.contrib import admin
+from django.contrib.auth.models import User
 
 class FeedbackForm(forms.Form):
     name = forms.CharField(label="Ваше имя", max_length=100, required=True)
@@ -32,3 +35,21 @@ class FeedbackForm(forms.Form):
         widget=forms.Textarea,
         required=False
     )
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment  # Используем модель Comment
+        fields = ('text',)  # В форме заполняем только текст комментария
+        labels = {'text': "Комментарий"}  # Название поля в интерфейсе
+
+class BlogForm(forms.ModelForm):
+    class Meta:
+        model = Blog
+        fields = ['title', 'short_content', 'content', 'image', 'author']  # Добавлено поле автора
+        labels = {
+            'title': "Заголовок",
+            'short_content': "Краткое содержание",
+            'content': "Полное содержание",
+            'image': "Изображение",
+            'author': "Автор статьи",  # Добавлено название поля в интерфейсе
+        }
