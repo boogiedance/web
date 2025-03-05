@@ -7,6 +7,7 @@
 
 {% block unique_links %}
     <link rel="stylesheet" href="{% static 'css/pool.css' %}">
+    <script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
 {% endblock %}
 
 {% block aside_content %}
@@ -20,5 +21,29 @@
         {{ form.as_p }}
         <button type="submit" id="submit-button">Отправить</button>
     </form>
-{% endblock %}
 
+    <!-- Добавляем JS-код -->
+    <script>
+        $(document).ready(function () {
+            // Изменение цвета кнопки при наведении
+            $("#submit-button").hover(
+                function () {
+                    $(this).css("background-color", "#2FC5E6").css("color", "#fff");
+                },
+                function () {
+                    $(this).css("background-color", "").css("color", "");
+                }
+            );
+
+            // Изменение цвета фона полей ввода при фокусе
+            $("input, textarea").focus(function () {
+                $(this).css("background-color", "#f0f8ff");
+            });
+
+            // Восстановление цвета фона при потере фокуса
+            $("input, textarea").blur(function () {
+                $(this).css("background-color", "");
+            });
+        });
+    </script>
+{% endblock %}

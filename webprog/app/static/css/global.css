@@ -2,6 +2,7 @@
 
 /* В логотипе. Не трогать */
 h1 {
+    all: unset;
     font-family: "Lobster", sans-serif;
     font-size: 22px;
     color: #ffffff;
