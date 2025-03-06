@@ -16,13 +16,13 @@
 
     <div class="video-container">
         <video width="320" height="240" controls preload="metadata" poster="{% static 'images/video1.jpg' %}" onloadedmetadata="this.currentTime = 0;">
-            <source src="{% static 'media/video1.mp4' %}" type="video/mp4">
+            <source src="{{ MEDIA_URL }}videos/video1.mp4" type="video/mp4">
         </video>
     </div>
 
     <div class="video-container">
         <video width="320" height="240" controls preload="metadata" poster="{% static 'images/video2.jpg' %}" onloadedmetadata="this.currentTime = 0;">
-            <source src="{% static 'media/video2.mp4' %}" type="video/mp4">
+            <source src="{{ MEDIA_URL }}videos/video2.mp4" type="video/mp4">
         </video>
     </div>
 {% endblock %}
